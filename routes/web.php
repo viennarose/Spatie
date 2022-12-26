@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RecordsController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\RolesController;
@@ -32,4 +33,11 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::resource('/roles', RolesController::class);
     Route::resource('/permissions', PermissionsController::class);
     Route::get('/user-view', [UserController::class, 'index']);
+});
+
+Route::middleware(['auth', 'role:user|admin'])->name('admin.')->prefix('admin')->group(function(){
+    Route::get('/', [IndexController::class, 'index'])->name('index');
+    Route::get('/patients', [RecordsController::class, 'index']);
+    Route::get('/records', [RecordsController::class, 'userOnly']);
+    Route::get('/records/{id}', [RecordsController::class, 'showRecord']);
 });

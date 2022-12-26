@@ -3,12 +3,12 @@
   @include('livewire.admin.roles.create')
   @include('livewire.admin.roles.edit')
   @include('livewire.admin.roles.delete')
-    <h1>Roles</h1>
+    <h1 class="text-center">Roles</h1>
     <div class="card">
       @if (session()->has('message'))
       <h5 class="alert alert-sucess text-success">{{ session('message') }}</h5>
       @endif
-      <a data-bs-toggle="modal" data-bs-target="#rolesModal" class="btn btn-primary"> Add</a>
+      <a data-bs-toggle="modal" data-bs-target="#rolesModal" class="btn btn-primary w-25 ms-auto"> Add</a>
     <table class="table">
         <thead>
           <tr>

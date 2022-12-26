@@ -25,8 +25,6 @@
 
     <link rel="stylesheet" href="{{ asset('assets/js/jquery-ui.css')}}">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha512-f0tzWhCwVFS3WeYaofoLWkTP62ObhewQ1EZn65oSYDZUg1+CyywGKkWzm8BxaJj5HGKI72PnMH9jYyIFz+GH7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link type="text/css" href="{{ asset('assets/css/jquery.signature.css')}}" rel="stylesheet">
     @livewireStyles
@@ -63,14 +61,7 @@
     <script src="{{ asset('assets/js/external/jquery/jquery.js')}}"></script>
     <script src="{{ asset('assets/js/jquery-ui.js')}}"></script>
 
-    {{-- for touch-enabled devices --}}
-    {{-- <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script> --}}
 
-    <script type="text/javascript" src="{{asset('assets/js/signature/jquery.signature.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     @livewireScripts
     @yield('script')
 
